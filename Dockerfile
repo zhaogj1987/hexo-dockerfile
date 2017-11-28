@@ -1,5 +1,9 @@
 
-FROM centos:7 ENV TZ=Asia/Shanghai LC_ALL=en_US.UTF-8 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+FROM centos:7 
+
+ENV TZ=Asia/Shanghai LC_ALL=en_US.UTF-8 
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo \
 && for packages in wget net-tools unzip vim-enhanced git;do yum -y install $packages; done \
