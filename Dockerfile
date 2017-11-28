@@ -1,4 +1,4 @@
-```
+
 FROM centos:7 ENV TZ=Asia/Shanghai LC_ALL=en_US.UTF-8 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
@@ -18,4 +18,4 @@ npm install hexo-deployer-git --save
 RUN git clone https://github.com/iissnan/hexo-theme-next themes/next 
 && git config --global user.name "your github name" 
 && git config --global user.email "your email"
-```
+
