@@ -10,7 +10,9 @@ RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Cen
 && yum clean all
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - \
-&& yum -y install nodejs WORKDIR /data/ok188.net
+&& yum -y install nodejs 
+
+WORKDIR /data/ok188.net
 
 RUN npm install hexo-cli -g && \
 hexo init . && \
